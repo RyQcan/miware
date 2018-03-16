@@ -1,0 +1,14 @@
+{
+  "operation": "selectView",
+  "args": {
+    "view": "specialized_ddos_view",
+    "field": "content",
+    "value": {
+      "$regex": "^黑客"
+    },
+    "page_spec": {
+      "page_index": 0,
+      "page_size": 100
+    }
+  }
+}
