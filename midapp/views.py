@@ -22,11 +22,11 @@ def sitedataadd(request):
     return HttpResponse(url)
 
 def jsonadd(request):
-    dict_data = str(request.POST['dict_data'])
+    dict_data = str(request.GET['dict_data'])
     query = MongoQuery(MONGO_SETTINGS)
 
     ret = query.query(dict_data)
-    pprint(json.loads(ret))
+    ret = "callback("+str(ret)+")" 
     return HttpResponse(ret)
 
 
